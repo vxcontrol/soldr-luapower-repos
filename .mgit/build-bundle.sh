@@ -15,9 +15,8 @@ function build_bundle() {
 
     echo "---------------------------------------"
     echo "Build bundle for $1 -> build/$BINARY"
-    mkdir -p build
-    P=$1 ./mgit bundle $BF -a "`P=$1 ./mgit bundle -las`" -m "`P=$1 ./mgit bundle -lls`" -v -o build/$BINARY
-    rm -rf build/*.a
+    mkdir -p build/$1
+    P=$1 ./mgit bundle $BF -a "`P=$1 ./mgit bundle -las`" -m "`P=$1 ./mgit bundle -lls`" -v -o build/$1/$BINARY
 }
 
 function build_all() {

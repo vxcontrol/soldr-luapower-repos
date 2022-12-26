@@ -146,6 +146,7 @@ nmodule = nmodule + 1
 print(tostring(nmodule) .. ". This is lightningmdb testing:")
 print(require("lightningmdb") and "ok" or "failed")
 require("lightningmdb_test")
+require("lightingmdb_mdbtest")
 print("----------------")
 
 -- linkedlist testing
